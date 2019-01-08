@@ -38,7 +38,7 @@ $agate-title-text-color: $agate-dark-gray;
 }
 
 body {
-  font-family: $agate-base-font-family;
+  font-family: $agate-base-font-family, sans-serif;
   font-size: $agate-base-font-size;
   font-variant-ligatures: $agate-base-font-ligatures;
   color: $agate-text-color;
