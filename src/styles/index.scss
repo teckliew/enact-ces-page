@@ -1,5 +1,90 @@
-$body-color: blue;
+//Import Google Icon fonts
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+//Variables
+$agate-base-font-family: "EnactMuseoSans";
+$agate-base-font-size: 24px;
+$agate-base-font-ligatures: none;
+$agate-component-spacing: 12px;
+
+
+//Colors
+$enact-color: #5582ff;
+$agate-accent: #a47d66;
+$agate-accent-hsl: hsl(22, 25%, 52%);
+$agate-highlight: #fff;
+$agate-background: fade(black, 30%);
+$agate-foreground: $agate-accent;
+$agate-background-active: fade(black, 15%);
+$agate-foreground-active: white;
+$agate-background-focus: $agate-highlight;
+$agate-foreground-focus: $agate-accent;
+$agate-gradient: linear-gradient(to bottom, white, $agate-accent);
+$agate-darker-gray: #373739;
+$agate-dark-gray:   #424242;
+$agate-gray:        #d8d8d8;
+$agate-light-gray:  #ededed;
+$agate-white:       #fff;
+
+// Component color assignments
+$agate-bg-color: $agate-light-gray;
+$agate-bg-image: radial-gradient(rgba($agate-accent-hsl, 0.2), transparent 60%), linear-gradient(to bottom, $agate-bg-color 43%, $agate-white 90%);
+$agate-text-color: $agate-darker-gray;
+$agate-title-text-color: $agate-dark-gray;
+
+@font-face {
+  font-family: 'EnactMuseoSans';
+  src: url('/public/fonts/MuseoSans/MuseoSans-Light.ttf');
+}
 
 body {
-  color: $body-color;
+  font-family: $agate-base-font-family;
+  font-size: $agate-base-font-size;
+  font-variant-ligatures: $agate-base-font-ligatures;
+  color: $agate-text-color;
+  background-color: $agate-bg-color;
+  background-image: $agate-bg-image;
+}
+
+nav {
+  background-color: $agate-accent;
+}
+
+.enact-color {
+  color: $enact-color;
+}
+
+.enact-background-color {
+  background-color: $enact-color;
+}
+
+.btn {
+  color: $agate-text-color;
+  background-color: $agate-white;
+
+  &:hover {
+    color: $agate-white;
+    background-color: lighten($agate-accent, 20%);
+  }
+
+  &:focus {
+    color: $agate-white;
+    background-color: darken($agate-accent, 20%);
+  }
+}
+
+.enact-logo {
+  margin: 18px;
+  height: 33px;
+}
+
+.octicon {
+  height: 24px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.call-out {
+  display: inline-block;
+  max-width: 500px;
 }
